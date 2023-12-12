@@ -31,4 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
-!/.openapi-generator/
+
+### Openapi Generator ###
+/.openapi-generator/
+/src/main/java/com/example/openapi_record_template/generated/
