@@ -12,33 +12,29 @@ externalDocs:
 paths:
   /visibility:
     get:
-      summary: Hello world
-      description: Hello world
-      operationId: helloWorld
-      tags:
-        - Hello world
+      summary: visibilityGet
+      description: visibilityGet
+      operationId: visibilityGet
       responses:
         '200':
-          description: Hello world
+          description: visibilityGet
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/VisibilityObject'
     post:
-      summary: Hello world
-      description: Hello world
-      operationId: helloWorldPost
-      tags:
-        - Hello world
+      summary: visibilityPost
+      description: visibilityPost
+      operationId: visibilityPost
       requestBody:
-        description: Hello world
+        description: visibilityPost
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/VisibilityObject'
       responses:
         '200':
-          description: Hello world
+          description: visibilityPost
           content:
             application/json:
               schema:
@@ -84,38 +80,4 @@ components:
 
       required:
         - requiredField
-
-#    HelloWorldRequest:
-#      type: object
-#      properties:
-#        message:
-#          type: string
-#          description: Hello world message
-#          minLength: 1
-#          maxLength: 20
-#          pattern: '^[a-zA-Z0-9]+$'
-#          x-pattern-message: 'Only letters and numbers are allowed'
-#          nullable: true
-#          example: 'Hello world'
-#        email:
-#          type: string
-#          format: email
-#          example: hello@test.com
-#          description: Email address
-#          minLength: 4
-#          maxLength: 79
-#          pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-#          deprecated: true
-#          nullable: false
-#        age:
-#          type: integer
-#          format: int32
-#          example: 18
-#          description: Age
-#          minimum: 16
-#          maximum: 99
-#          readOnly: true
-#      required:
-#        - email
-
 
