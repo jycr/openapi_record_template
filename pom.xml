@@ -131,18 +131,18 @@
 						</configuration>
 					</execution>
 
-					<execution>
-						<id>generate-default-without-template</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<apiPackage>${project.groupId}.${project.artifactId}.generated.no_template.hello-world.api</apiPackage>
-							<modelPackage>${project.groupId}.${project.artifactId}.generated.no_template.hello-world.dto</modelPackage>
-							<inputSpec>src/main/resources/openapi.yaml</inputSpec>
-						</configuration>
-					</execution>
+<!--					<execution>-->
+<!--						<id>generate-default-without-template</id>-->
+<!--						<phase>generate-sources</phase>-->
+<!--						<goals>-->
+<!--							<goal>generate</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<apiPackage>${project.groupId}.${project.artifactId}.generated.no_template.hello-world.api</apiPackage>-->
+<!--							<modelPackage>${project.groupId}.${project.artifactId}.generated.no_template.hello-world.dto</modelPackage>-->
+<!--							<inputSpec>src/main/resources/openapi.yaml</inputSpec>-->
+<!--						</configuration>-->
+<!--					</execution>-->
 
 					<execution>
 						<id>generate-composition</id>
@@ -184,18 +184,18 @@
 						</configuration>
 					</execution>
 
-					<execution>
-						<id>generate-visibility-without-template</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<apiPackage>${project.groupId}.${project.artifactId}.generated.no_template.visibility.api</apiPackage>
-							<modelPackage>${project.groupId}.${project.artifactId}.generated.no_template.visibility.dto</modelPackage>
-							<inputSpec>src/main/resources/visibility.yaml</inputSpec>
-						</configuration>
-					</execution>
+<!--					<execution>-->
+<!--						<id>generate-visibility-without-template</id>-->
+<!--						<phase>generate-sources</phase>-->
+<!--						<goals>-->
+<!--							<goal>generate</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<apiPackage>${project.groupId}.${project.artifactId}.generated.no_template.visibility.api</apiPackage>-->
+<!--							<modelPackage>${project.groupId}.${project.artifactId}.generated.no_template.visibility.dto</modelPackage>-->
+<!--							<inputSpec>src/main/resources/visibility.yaml</inputSpec>-->
+<!--						</configuration>-->
+<!--					</execution>-->
 
 				</executions>
 			</plugin>
