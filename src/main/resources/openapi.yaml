@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: UniMed API
+  description: UniMed API
+  version: 1.0.0
+servers:
+  - url: https://dev-api.unimed.com/api/v1
+externalDocs:
+  url: https://wiki.andersenlab.com/display/UNM/1.+MVP
+  description: UniMed Wiki
+
+paths:
+  /hello-world:
+    get:
+      summary: Hello world
+      description: Hello world
+      operationId: helloWorld
+      tags:
+        - Hello world
+      responses:
+        '200':
+          description: Hello world
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HelloWorld'
+components:
+  schemas:
+    HelloWorld:
+      type: object
+      properties:
+        message:
+          type: string
+

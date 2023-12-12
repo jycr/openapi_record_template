@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: UniMed API
+  description: UniMed API
+  version: 1.0.0
+servers:
+  - url: https://dev-api.unimed.com/api/v1
+externalDocs:
+  url: https://wiki.andersenlab.com/display/UNM/1.+MVP
+  description: UniMed Wiki
+
+paths:
+  /visibility:
+    get:
+      summary: Hello world
+      description: Hello world
+      operationId: helloWorld
+      tags:
+        - Hello world
+      responses:
+        '200':
+          description: Hello world
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VisibilityObject'
+    post:
+      summary: Hello world
+      description: Hello world
+      operationId: helloWorldPost
+      tags:
+        - Hello world
+      requestBody:
+        description: Hello world
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VisibilityObject'
+      responses:
+        '200':
+          description: Hello world
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VisibilityObject'
+components:
+  schemas:
+    VisibilityObject:
+      type: object
+      properties:
+        onlyForRequest:
+          type: string
+          writeOnly: true
+        onlyForResponse:
+          type: string
+          readOnly: true
+        forBoth:
+          type: string
+        nullableField:
+          type: string
+          nullable: true
+        requiredField:
+          type: string
+        nullablePatternField:
+          type: string
+          nullable: true
+          pattern: '^[a-zA-Z0-9]+$'
+          x-pattern-message: 'Only letters and numbers are allowed'
+          minLength: 1
+          maxLength: 20
+        dateField:
+          type: string
+          format: date
+          example: 2020-01-01
+          description: Date
+        dateTimeField:
+          type: string
+          format: date-time
+          example: 2020-01-01T00:00:00Z
+          description: Date time
+        deprecatedField:
+          type: string
+          deprecated: true
+
+      required:
+        - requiredField
+
+#    HelloWorldRequest:
+#      type: object
+#      properties:
+#        message:
+#          type: string
+#          description: Hello world message
+#          minLength: 1
+#          maxLength: 20
+#          pattern: '^[a-zA-Z0-9]+$'
+#          x-pattern-message: 'Only letters and numbers are allowed'
+#          nullable: true
+#          example: 'Hello world'
+#        email:
+#          type: string
+#          format: email
+#          example: hello@test.com
+#          description: Email address
+#          minLength: 4
+#          maxLength: 79
+#          pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+#          deprecated: true
+#          nullable: false
+#        age:
+#          type: integer
+#          format: int32
+#          example: 18
+#          description: Age
+#          minimum: 16
+#          maximum: 99
+#          readOnly: true
+#      required:
+#        - email
+
+

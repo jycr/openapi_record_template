@@ -1,0 +1,6 @@
+src/main/java/com/example/openapi_record_template/generated/config/HomeController.java
+src/main/java/com/example/openapi_record_template/generated/config/SpringDocConfiguration.java
+src/main/java/com/example/openapi_record_template/generated/no_template/visibility/api/ApiUtil.java
+src/main/java/com/example/openapi_record_template/generated/no_template/visibility/api/VisibilityApi.java
+src/main/java/com/example/openapi_record_template/generated/no_template/visibility/api/VisibilityApiDelegate.java
+src/main/java/com/example/openapi_record_template/generated/no_template/visibility/dto/VisibilityObject.java

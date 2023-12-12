@@ -1,0 +1,48 @@
+openapi: 3.0.3
+info:
+  title: Composition Error API
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /error:
+    get:
+      summary: Find errors
+      description: Returns all errors from the system that the user has access to
+      operationId: findErrors
+      responses:
+        '200':
+          description: A list of errors.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  oneOf:
+                    - $ref: '#/components/schemas/ErrorModel'
+                    - $ref: '#/components/schemas/ExtendedErrorModel'
+components:
+  schemas:
+    ErrorModel:
+      type: object
+      required:
+        - message
+        - code
+      properties:
+        message:
+          type: string
+        code:
+          type: integer
+          minimum: 100
+          maximum: 600
+    ExtendedErrorModel:
+      allOf:
+        - $ref: '#/components/schemas/ErrorModel'
+        - type: object
+          required:
+            - rootCause
+          properties:
+            rootCause:
+              type: string
+  
