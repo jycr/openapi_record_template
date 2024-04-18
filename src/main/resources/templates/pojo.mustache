@@ -1,6 +1,10 @@
 /**
- * {{description}}{{^description}}{{classname}}{{/description}}{{#isDeprecated}}
+ * {{description}}{{^description}}{{classname}}{{/description}}
+ *{{#isDeprecated}}
  * @deprecated{{/isDeprecated}}
+{{#vars}}
+ * @param {{name}} {{description}}
+{{/vars}}
  */
 {{>additionalModelTypeAnnotations}}
 {{#description}}
